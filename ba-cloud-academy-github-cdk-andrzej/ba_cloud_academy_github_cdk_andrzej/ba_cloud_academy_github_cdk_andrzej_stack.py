@@ -1,6 +1,7 @@
 from aws_cdk import (
     Stack,
-    aws_s3 as s3
+    aws_s3 as s3,
+    RemovalPolicy
 )
 from constructs import Construct
 
@@ -13,5 +14,6 @@ class BaCloudAcademyGithubCdkAndrzejStack(Stack):
         bucket = s3.Bucket(
             self, 
             'bucket-object', # this is just the CDK object name
-            bucket_name='ba-github-cdk-bucket-andrzej' # actual bucket name
+            bucket_name='ba-github-cdk-bucket-andrzej', # actual bucket name
+            removal_policy=s3.apply_removal_policy(RemovalPolicy.DESTROY)
         )
