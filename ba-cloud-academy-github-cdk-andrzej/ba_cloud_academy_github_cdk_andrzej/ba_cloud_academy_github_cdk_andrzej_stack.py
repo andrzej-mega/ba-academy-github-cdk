@@ -13,5 +13,5 @@ class BaCloudAcademyGithubCdkAndrzejStack(Stack):
         bucket = s3.Bucket(
             self, 
             'bucket-object', # this is just the CDK object name
-            bucket_name='ba-github-cdk-bucket-andrzej'
+            bucket_name='ba-github-cdk-bucket-andrzej' # actual bucket name
         )
