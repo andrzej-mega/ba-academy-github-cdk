@@ -15,5 +15,5 @@ class BaCloudAcademyGithubCdkAndrzejStack(Stack):
             self, 
             'bucket-object', # this is just the CDK object name
             bucket_name='ba-github-cdk-bucket-andrzej', # actual bucket name
-            removal_policy=s3.apply_removal_policy(RemovalPolicy.DESTROY)
+            removal_policy=RemovalPolicy.DESTROY
         )
