@@ -1,10 +1,9 @@
 name: Deploy CDK Application
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types: [closed]
     
 env:
   CDK_LOCAL_FOLDER: ./ba-cloud-academy-github-cdk-andrzej
