@@ -13,6 +13,5 @@ class BaCloudAcademyGithubCdkAndrzejStack(Stack):
         bucket = s3.Bucket(
             self, 
             'bucket-object', # this is just the CDK object name
-            bucket_name='ba-github-cdk-bucket-andrzej', # Bucket name as it appears in the S3 dashboard
-            block_public_access=True
+            bucket_name='ba-github-cdk-bucket-andrzej'
         )
